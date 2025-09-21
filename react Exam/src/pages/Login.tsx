@@ -19,7 +19,7 @@ const Login: React.FC = () => {
     const validate = () => {
         const newErrors: Partial<LoginFormData> = {};
 
-        if (!formData.email || formData.email.includes('@') || !formData.email.includes('.')) {
+        if (!formData.email || !formData.email.includes('@') || !formData.email.includes('.')) {
             newErrors.email = 'Please enter a valid email.';
         }
 
